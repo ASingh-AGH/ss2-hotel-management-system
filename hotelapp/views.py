@@ -4,7 +4,7 @@ from django.contrib import messages
 from .forms import UserRegistrationForm
 
 def home(request):
-    return render(request, 'users/home.html')
+    return render(request, 'hotelapp/home.html')
 
 def register(request):
     if request.method == 'POST':
@@ -18,7 +18,7 @@ def register(request):
         form = UserRegistrationForm()
 
     context = {'form': form}
-    return render(request, 'users/register.html', context)
+    return render(request, 'hotelapp/register.html', context)
 
 def logout_request(request):
 	logout(request)
