@@ -10,3 +10,10 @@
         <a href="{% url 'login' %}">Login</a>
     </div>
 {% endif %}
+
+{% for rm in room %}
+
+<a href=roomInfo>{{rm.name}}</a>
+<br>
+
+{% endfor %}

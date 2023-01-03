@@ -1,10 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
+from django.urls import reverse
+from urllib.parse import urlencode
 from .forms import UserRegistrationForm
+from .models import Rooms
 
 def home(request):
-    return render(request, 'hotelapp/home.html')
+    room=Rooms.objects.all()
+    return render(request, 'hotelapp/home.html', {'room':room})
 
 def register(request):
     if request.method == 'POST':
@@ -24,3 +28,6 @@ def logout_request(request):
 	logout(request)
 	messages.info(request, "You have successfully logged out.") 
 	return redirect("home")
+
+def room_info(request):
+    return render(request, 'hotelapp/roomInfo.html')
