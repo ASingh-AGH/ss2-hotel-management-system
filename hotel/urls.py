@@ -26,6 +26,6 @@ urlpatterns = [
 
     path('login/', auth_views.LoginView.as_view(template_name='hotelapp/login.html'), name='login'),
     path("logout", views.logout_request, name= "logout"),
-    path("roomInfo/", views.room_info, name="roomInfo"),
+    path("roomInfo/<int:room_id>/", views.roomInfo, name="roomInfo"),
     path("profile/", views.profile, name="profile"),
 ]

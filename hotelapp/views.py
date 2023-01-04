@@ -30,8 +30,13 @@ def logout_request(request):
 	messages.info(request, "You have successfully logged out.") 
 	return redirect("home")
 
-def room_info(request):
-    return render(request, 'hotelapp/roomInfo.html')
+def roomInfo(request, room_id):
+    room = Rooms.objects.get(pk=room_id)
+    context = {
+        'user': request.user,
+        'room': room
+    }
+    return render(request, 'hotelapp/roomInfo.html', context)
 
 @login_required
 def profile(request):

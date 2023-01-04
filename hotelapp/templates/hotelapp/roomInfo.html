@@ -1,0 +1,21 @@
+{% block content %}
+
+<p>Room Name: {{ room.name }}</p>
+<p>Floor: {{ room.floor }}</p>
+
+{% if user.is_superuser %}
+    <p>Room clean: 
+        {% if room.clean_status == '1'%}
+            True
+        {% else %}
+            False
+        {% endif %}
+    </p>
+{% endif %}
+
+{% if user.is_authenticated %}
+<button>Reserve</button>
+{% else %}
+<b>Login to reserve</b>
+{% endif %}
+{% endblock content %}

@@ -14,7 +14,7 @@
 <br>
 {% for rm in room %}
 
-<a href=roomInfo>{{rm.name}}</a>
+<a href="{% url 'roomInfo' rm.id %}"">{{rm.name}}</a>
 <br>
 
 {% endfor %}
