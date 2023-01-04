@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.urls import reverse
 from urllib.parse import urlencode
-from .forms import UserRegistrationForm
-from .models import Rooms
+from .forms import UserRegistrationForm, UserUpdateForm
+from .models import Rooms, Reservations
 
 def home(request):
     room=Rooms.objects.all()
@@ -31,3 +32,11 @@ def logout_request(request):
 
 def room_info(request):
     return render(request, 'hotelapp/roomInfo.html')
+
+@login_required
+def profile(request):
+    context = {
+        'user': request.user
+    }
+    
+    return render(request, 'hotelapp/profile.html', context)
