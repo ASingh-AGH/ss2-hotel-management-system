@@ -13,7 +13,9 @@ class Reservations(models.Model):
     id = models.BigAutoField(primary_key=True)
     customer_ID = models.CharField(max_length=1000)
     room_ID = models.CharField(max_length=3)
-    date = models.DateField()
+    start_date = models.DateField()
+    end_date = models.DateField()
+    room_name = models.CharField(max_length=100, default='')
     class Meta:
         db_table='Reservations'
 

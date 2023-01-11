@@ -7,6 +7,15 @@
 <p>First Name: {{ user.first_name }}</p>
 <p>Last Name: {{ user.last_name }}</p>
 
-<!--TODO: Show room reservations-->
+<h2>Reservations</h2>
+{% for re in reserves %}
+
+    <p>Start: {{ re.start_date }}</p>
+    <p>End: {{ re.end_date }}</p>
+    <p>Room: {{re.room_name}}</p>
+
+<br>
+
+{% endfor %}
 
 {% endblock content %}

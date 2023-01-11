@@ -9,12 +9,25 @@
             True
         {% else %}
             False
+            <button>Cleaned</button>
         {% endif %}
     </p>
+    
 {% endif %}
 
 {% if user.is_authenticated %}
-<button>Reserve</button>
+    {% if not user.is_superuser and taken != True %}
+        <form action="" method="POST">
+        {% csrf_token %}
+            <div>
+                <p>Start Date: <br> {{ form.start_date }}</p> 
+                <p>End Date: <br> {{ form.end_date }}</p> 
+                {% for error in form.errors %}
+                    <small style="color: red">{{ error }}</small>
+                {% endfor %}
+            </div>
+        <button type="submit">Reserve</button>
+    {% endif %}
 {% else %}
 <b>Login to reserve</b>
 {% endif %}
