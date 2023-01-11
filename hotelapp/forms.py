@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
-from .models import Reservations
+from .models import Reservations, Rooms
 
 
 class UserRegistrationForm(UserCreationForm):
@@ -32,3 +32,9 @@ class RoomReservationForm(forms.ModelForm):
         model = Reservations
         fields = ['customer_ID', 'room_ID','start_date', 'end_date', 'room_name']
 
+class RoomsUpdateForm(forms.ModelForm):
+    status = forms.CharField()
+
+    class Meta:
+        model = Rooms
+        fields = ['clean_status']

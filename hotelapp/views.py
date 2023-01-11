@@ -40,8 +40,9 @@ def roomInfo(request, room_id):
     for re in reserves:
         if re.start_date < date.today() < re.end_date:
             taken = True
-        elif re.end_date < date.today:
+        elif re.end_date < date.today():
             re.delete()
+            room.update(clean_status=0)
         else:
             taken = False
 
@@ -55,7 +56,6 @@ def roomInfo(request, room_id):
             form.save()
             messages.success(request, f'Your reservation has been created. You can log in now!')
             return redirect('profile')
-        
     else:
         form = RoomReservationForm()  
     

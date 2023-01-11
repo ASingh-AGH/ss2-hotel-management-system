@@ -7,15 +7,17 @@
 <p>First Name: {{ user.first_name }}</p>
 <p>Last Name: {{ user.last_name }}</p>
 
-<h2>Reservations</h2>
-{% for re in reserves %}
+{% if not user.is_superuser %}
+    <h2>Reservations</h2>
+    {% for re in reserves %}
 
-    <p>Start: {{ re.start_date }}</p>
-    <p>End: {{ re.end_date }}</p>
-    <p>Room: {{re.room_name}}</p>
+        <p>Start: {{ re.start_date }}</p>
+        <p>End: {{ re.end_date }}</p>
+        <p>Room: {{re.room_name}}</p>
 
-<br>
+    <br>
 
-{% endfor %}
+    {% endfor %}
+{% endif %}
 
 {% endblock content %}
