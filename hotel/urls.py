@@ -28,4 +28,5 @@ urlpatterns = [
     path("logout", views.logout_request, name= "logout"),
     path("roomInfo/<int:room_id>/", views.roomInfo, name="roomInfo"),
     path("profile/", views.profile, name="profile"),
+    path("about/", views.about, name="about"),
 ]

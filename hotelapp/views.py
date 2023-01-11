@@ -45,3 +45,7 @@ def profile(request):
     }
     
     return render(request, 'hotelapp/profile.html', context)
+
+def about(request):
+	
+	return render(request, 'hotelapp/about.html')
