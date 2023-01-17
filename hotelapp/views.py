@@ -82,6 +82,11 @@ def profile(request):
     return render(request, 'hotelapp/profile.html', context)
 
 def about(request):
-	
 	return render(request, 'hotelapp/about.html')
+
+def components(request):
+	return render(request, 'hotelapp/components.html')
+
+def faq(request):
+	return render(request, 'hotelapp/faq.html')
 

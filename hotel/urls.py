@@ -29,4 +29,6 @@ urlpatterns = [
     path("roomInfo/<int:room_id>/", views.roomInfo, name="roomInfo"),
     path("profile/", views.profile, name="profile"),
     path("about/", views.about, name="about"),
+    path("components/", views.components, name="components"),
+    path("faq/", views.faq, name="faq"),
 ]
