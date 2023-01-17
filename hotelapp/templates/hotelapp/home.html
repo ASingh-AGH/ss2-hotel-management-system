@@ -1,3 +1,15 @@
+<link rel="stylesheet" href="assets/css/joeblog.css">
+
+   <!-- Page Header -->
+   <header class="header header-mini"> 
+    <div class="header-title">Components</div> 
+    <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Components</li>
+       </ol>
+    </nav>
+ </header> <!-- End Of Page Header -->
 
 {% if user.is_authenticated %}
     <div class="alert alert-success" role="alert">
@@ -21,4 +33,7 @@
 {% endfor %}
 
 <a href="{% url 'about' %}">about</a>
+<br>
+
+<a href="{% url 'faq' %}">faq</a>
 <br>
