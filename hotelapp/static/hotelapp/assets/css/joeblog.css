@@ -11644,13 +11644,14 @@ textarea.form-control {
 }
 
  /* MY CODE INSERT */
- .fixed-bg {
-  background-image: url(".assets/imgs/insta-4.jpg");
+.fixed-bg {
+  background-image: url("../images/insta-4.jpg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .page-header.page-header-mini .title {
@@ -11795,12 +11796,12 @@ section .section-secondary-title {
 }
 
 /* Images used */
-.img1 { background-image: url(".hotelapp/assets/imgs/blog-1.jpg"); }
-.img2 { background-image: url(".hotelapp/assets/imgs/blog-2.jpg"); }
-.img3 { background-image: url(".hotelapp/assets/imgs/blog-3.jpg"); }
+.img1 { background-image: url("../images/blog-1.jpg"); }
+.img2 { background-image: url("../images/blog-1.jpg"); }
+/* .img3 { background-image: url(".hotelapp/assets/imgs/blog-3.jpg"); }
 .img4 { background-image: url(".hotelapp/assets/imgs/blog-4.jpg"); }
 .img5 { background-image: url(".hotelapp/assets/imgs/blog-5.jpg"); }
-.img6 { background-image: url(".hotelapp/assets/imgs/blog-6.jpg"); }
+.img6 { background-image: url(".hotelapp/assets/imgs/blog-6.jpg"); } */
 
 /* Position text in the middle of the page/image */
 .bg-text {
@@ -11822,4 +11823,5 @@ section .section-secondary-title {
   font-size: calc(38px + (50 - 48) * ((100vw - 320px) / (1200 - 320)));
   z-index: 10;
   font-weight: bold;
+  overflow: hidden;
 }

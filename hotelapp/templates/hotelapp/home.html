@@ -1,15 +1,4 @@
-<link rel="stylesheet" href="assets/css/joeblog.css">
-
-   <!-- Page Header -->
-   <header class="header header-mini"> 
-    <div class="header-title">Components</div> 
-    <nav aria-label="breadcrumb">
-       <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Components</li>
-       </ol>
-    </nav>
- </header> <!-- End Of Page Header -->
+{% extends "../hotelapp/base.html" %}
 
 {% if user.is_authenticated %}
     <div class="alert alert-success" role="alert">
@@ -32,8 +21,14 @@
 
 {% endfor %}
 
-<a href="{% url 'about' %}">about</a>
-<br>
 
-<a href="{% url 'faq' %}">faq</a>
-<br>
+<header class="page-header page-header-mini">
+
+    <div class=".fixed-bg"></div>
+    <h1 class="title">Home</h1>
+    <ol class="breadcrumb pb-0">
+        <li class="breadcrumb-item"><a href="..index.html">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Got other queries? Contact us.</li>
+    </ol>
+</header>
+<!-- End Of Page Header -->
