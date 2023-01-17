@@ -1,31 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'hotelapp/assets/css/joeblog.css' %}">
+
 
 <!-- saved from url=(0125)file:///home/athena/Desktop/AGH%20linux/Winter%202022-23/SS2/ss2-hotel-management-system/hotelapp/templates/hotelapp/faq.html -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     	
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with JoeBLog landing page.">
-    <meta name="author" content="Devcrud">
-    <title>JoeBLog | Free Bootstrap 4.3.x template</title>
+    <title>FAQ</title>
     <!-- font icons -->
     <link rel="stylesheet" href="./faq_files/themify-icons.css">
     <!-- Bootstrap + JoeBLog main styles -->
 	<link rel="stylesheet" href="./faq_files/joeblog.css">
 
-
-    <div class="bg-image img1"></div>
-    <div class="bg-image img2"></div>
-    <div class="bg-image img3"></div>
-    <div class="bg-image img4"></div>
-    <div class="bg-image img5"></div>
-    <div class="bg-image img6"></div>
-    
-    <div class="bg-text">TEXT</div>
-
-
-
-
-
-    
     <!-- Page Second Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
         <div class="container">
@@ -68,15 +54,37 @@
     </nav>
     <!-- End Of Page Second Navigation -->
 
+
+
+
+
     <!-- Page Header -->
     <header class="page-header page-header-mini">
-        <h1 class="title">Frequently Asked Questions</h1>
+
+        <div class=".bg-image"></div>
+        
+    <!-- <div class="bg-image img1"></div>
+        <div class="bg-image img2"></div>
+        <div class="bg-image img3"></div>
+        <div class="bg-image img4"></div>
+        <div class="bg-image img5"></div>
+        <div class="bg-image img6"></div> -->
+        
+        <div class="bg-text">Frequently Asked Questions</div>
+
+
+        <!-- <h1 class="title">Frequently Asked Questions</h1> -->
         <ol class="breadcrumb pb-0">
             <li class="breadcrumb-item"><a href="file:///home/athena/Desktop/AGH%20linux/Winter%202022-23/SS2/ss2-hotel-management-system/hotelapp/templates/hotelapp/index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">Got other queries? Contact us.</li>
         </ol>
     </header>
     <!-- End Of Page Header -->
+
+
+
+
+
 
     <section class="container">
         <div class="page-container">
@@ -108,69 +116,33 @@
     <div class="instagram-wrapper mt-5">
         
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-1.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-1.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-2.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-2.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-3.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-3.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-4.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-4.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-5.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-5.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src="./faq_files/insta-6.jpg" alt="" class="w-100">
+            <img src=".hotelapp/faq_files/insta-6.jpg" alt="" class="w-100">
             <div class="overlay">
-                <span>
-                    <i class="ti-heart"></i> 23
-                </span>
-                <span>
-                    <i class="ti-comment"></i> 12
-                </span>
             </div>
         </a>
     </div>
@@ -182,11 +154,8 @@
                 <div class="col-md-3 text-center text-md-left mb-3 mb-md-0">
                     <img src="./faq_files/Blacklogo.png" alt="" class="logo">
                 </div>
-                <div class="col-md-9 text-center text-md-right">
-                    
-                </div>  
             </div>
-            <p class="border-top mb-0 mt-4 pt-3 small"><script>document.write(new Date().getFullYear())</script>20232023SS2 2023 Winter Final Project | Pierre Rheeder, Apoorva Singh</p> 
+            <p>2023 Winter Final Project | Pierre Rheeder, Apoorva Singh</p> 
         </div>      
     </footer>
     <!-- End of Page Footer -->
@@ -197,8 +166,5 @@
 
     <!-- JoeBLog js -->
     <script src="./faq_files/joeblog.js"></script>
-
-
-
 
 </body></html>
