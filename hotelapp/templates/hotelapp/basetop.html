@@ -1,3 +1,4 @@
+<!-- START OF NAV FORMALITIES COPY OF BASE TOP SINCE THE LINK IS ANNOYING -->
 {% load static %}
 
 <link rel="stylesheet" href="{% static 'hotelapp/assets/css/joeblog.css' %}">
@@ -22,6 +23,13 @@
     <!-- Page Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
         <div class="container">
+
+
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'hotelapp/assets/images/Whitelogo.png' %}" alt="" class="logo">
+            </a>
+
+
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,14 +44,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'about' %}">Contact</a>
                             <a class="dropdown-item" hhref="{% url 'login' %}">Login</a>
                         </div>
+                    </li>
                 </ul>
                 <div class="navbar-nav ml-auto">
                 </div>
@@ -51,5 +63,4 @@
         </div>
     </nav>
     <!-- End Of Page Navigation -->
-
-
+<!-- END OF NAV FORMALITIES OF BASE TOP SINCE THE LINK IS ANNOYING -->

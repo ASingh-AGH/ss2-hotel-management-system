@@ -11,9 +11,7 @@
     <meta name="authors" content="Pierre Rheeder, Apoorva Singh">
     <title>SKYE RESORTS & HOTELS</title>
 
-</head>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+</head><body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
     
     <!-- font icons -->
@@ -26,9 +24,11 @@
     <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-primary sticky-top">
         <div class="container">
 
+
             <a class="navbar-brand" href="#">
-                <img src="{% static 'hotelapp/assets/images/Blacklogo.png' %}" alt="" class="logo">
+                <img src="{% static 'hotelapp/assets/images/Whitelogo.png' %}" alt="" class="logo">
             </a>
+
 
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -44,14 +44,18 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'about' %}">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             More
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{% url 'about' %}">Contact</a>
                             <a class="dropdown-item" hhref="{% url 'login' %}">Login</a>
                         </div>
+                    </li>
                 </ul>
                 <div class="navbar-nav ml-auto">
                 </div>
@@ -59,21 +63,15 @@
         </div>
     </nav>
     <!-- End Of Page Navigation -->
-<!-- END OF NAV FORMALITIES COPY OF BASE TOP SINCE THE LINK IS ANNOYING -->
+<!-- END OF NAV FORMALITIES OF BASE TOP SINCE THE LINK IS ANNOYING -->
 
     <!-- Page Header -->
     
     
-    <header class="page-header page-header-mini">
-        <h1 class="title">Frequently Asked Questions</h1>
-        <ol class="breadcrumb pb-0">
-            <li class="breadcrumb-item active" aria-current="page">Got other queries? <a class="dropdown-item" href="{% url 'about' %}">Contact us.</a> </li>
-        </ol>
+    <header class="page-header-faq">
+        <h1 class="titlefaq">Frequently Asked Questions</h1>
     </header>
     <!-- End Of Page Header -->
-
-
-
 
 
 
@@ -146,6 +144,21 @@
                         <p class="my-1"> Yes, all our rooms are equipped with smoke detectors, fire alarms, and safety locks. The entire premise is CCTV monitored.</p> 
                     </div>
 
+                    <div class="card-header pt-0">
+                        <h5 class="card-title mb-4">Q7. How do I book a room?</h3>
+                        <div class="blog-media mb-1">                  
+                        </div>  
+                    </div>
+                    <div class="card-body border-top">
+                        <p class="my-1"> The rooms can be viewed and booked here.</p> 
+                    </div>
+
+                        {% for rm in room %}
+
+                        <a href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
+                        <br>
+
+                        {% endfor %}
                 </div> 
             </div>
         </div>
@@ -154,35 +167,66 @@
     <div class="instagram-wrapper mt-5">
         
         <a href="javascript:void(0)" class="insta-item">
-            <img src="../hotelapp/faq_files/insta-1.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/petroom.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Pet Freindly Rooms
+               </span>
+            </div>
+        </a>
+
+        <a href="javascript:void(0)" class="insta-item">
+            <img src="{% static 'hotelapp/assets/images/room.jpg' %}"  alt="" class="h-100px">
+            <div class="overlay">
+                <span>
+                    Double Rooms
+               </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src=".hotelapp/faq_files/insta-2.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/lamps.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Lounge
+               </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src=".hotelapp/faq_files/insta-3.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/dining.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Dining
+               </span>
             </div>
         </a>
         <a href="javascript:void(0)" class="insta-item">
-            <img src=".hotelapp/faq_files/insta-4.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/pool.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Pool
+               </span>
             </div>
         </a>
+        
         <a href="javascript:void(0)" class="insta-item">
-            <img src=".hotelapp/faq_files/insta-5.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/table.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Single Rooms
+               </span>
             </div>
         </a>
+
         <a href="javascript:void(0)" class="insta-item">
-            <img src=".hotelapp/faq_files/insta-6.jpg" alt="" class="w-100">
+            <img src="{% static 'hotelapp/assets/images/parking1.jpg' %}"  alt="" class="h-100px">
             <div class="overlay">
+                <span>
+                    Parking
+               </span>
             </div>
         </a>
+
+
     </div>
 
     <!-- Page Footer -->
@@ -199,6 +243,7 @@
         </div>      
     </footer>
     <!-- End of Page Footer -->
+
 
 	<!-- core  -->
     <script src="./faq_files/jquery-3.4.1.js"></script>
