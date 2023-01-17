@@ -22,8 +22,8 @@ from hotelapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
+    path('home/', views.home, name='home'),
     path('register/', views.register, name='register'),
-
     path('login/', auth_views.LoginView.as_view(template_name='hotelapp/login.html'), name='login'),
     path("logout", views.logout_request, name= "logout"),
     path("roomInfo/<int:room_id>/", views.roomInfo, name="roomInfo"),
