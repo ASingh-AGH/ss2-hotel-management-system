@@ -556,6 +556,16 @@ pre code {
   margin-left: auto;
 }
 
+.fill {
+  width: 100%;
+  padding-right: 40px;
+  padding-left: 30px;
+  margin-right: 30px;
+  margin-left: 30px;
+  background-color: #919191;
+  border-left: solid;
+}
+
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
@@ -11680,6 +11690,30 @@ textarea.form-control {
   z-index: 10;
   font-weight: bold;
   /* overflow: hidden; */
+}
+
+.page-header-abt .home{
+
+  color: #343a40;
+  font-size: calc(38px + (50 - 48) * ((100vw - 320px) / (1200 - 320)));
+  background-color: rgb(0,0,0);
+  background-color: rgb(255 255 255 / 40%);
+  /* font-size: 80px; */
+  border: 10px solid #f1f1f1;
+  position: fixed;
+  top: 100%;
+  left: 25%;
+  transform: translate(40%, -40%);
+  /* z-index: 2; */
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  /* color: white; */
+  font-size: calc(38px + (50 - 48) * ((100vw - 320px) / (1200 - 320)));
+  z-index: 10;
+  font-weight: bold;
+  overflow: hidden;
+
 }
 .page-header-rooms {
   position: relative;
