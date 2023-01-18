@@ -81,9 +81,11 @@
         Last Name: {{ user.last_name }}
     </h6>
 
+    <h6 class="profileboxres">
+
         {% if not user.is_superuser %}
         <br><br>
-            <h2>Reservations</h2>
+            Reservations
             <br><br>
             {% for re in reserves %}
 
@@ -96,6 +98,7 @@
         {% endif %}
         {% endblock content %}
 
+    </h6>
 </header>
 <!-- End Of Page Header -->
 
