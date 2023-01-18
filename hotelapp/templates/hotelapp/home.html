@@ -97,16 +97,17 @@
     <!-- End of Page Footer -->
 
     <hr>
-    <header class="page-header-abt">
-            <h1 class="page-header home">Rooms</h1>
+    <header class="page-header-home">
+            <h1 class="page-header-home home">Rooms</h1>
+            <br>
+            {% for rm in room %}
 
-                    {% for rm in room %}
-
-                    <a class="fill" href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
-                    <br>
-                    
-                    {% endfor %}
+            <a class="fill" href="{% url 'roomInfo' rm.id %}">{{rm.name}} <br></a>
+            <br>
+            
+            {% endfor %}
     </header>
+
 
 
 
