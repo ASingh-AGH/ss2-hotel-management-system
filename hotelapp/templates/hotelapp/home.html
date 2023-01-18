@@ -11,7 +11,8 @@
     <meta name="authors" content="Pierre Rheeder, Apoorva Singh">
     <title>SKYE RESORTS & HOTELS</title>
 
-</head><body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     
     
     <!-- font icons -->
@@ -97,6 +98,16 @@
 
 
     
+    
+    {% for rm in room %}
+
+    <a href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
+    <br>
+    
+    {% endfor %}
+
+
+
 	<!-- core  -->
     <script src="./faq_files/jquery-3.4.1.js"></script>
     <script src="./faq_files/bootstrap.bundle.js"></script>
@@ -107,10 +118,3 @@
 </body>
 </html>    
 
-<!-- 
-{% for rm in room %}
-
-<a href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
-<br>
-
-{% endfor %} -->
