@@ -68,6 +68,17 @@
 
 <link rel="stylesheet" href="{% static 'hotelapp/assets/css/joeblog.css' %}">
 
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <button type="submit">Login</button>
+</form>
+
+
+
+
 <body>
 	<section class="login">
 		<div class="login_box">
@@ -76,20 +87,15 @@
 					<form action="">
 						<h3>Login</h3>
                         
-
                         <form action="" method="POST">
                             {% csrf_token %}
                             {% for field in form %}
                                 <p>{{ field.label }}: <br> {{ field }}</p>
                             {% endfor %}
-                            <button type="submit" class="submit">Submit</button>
+                            <button type="submit">Login</button>
+                        </form>
                             <br>
                         <p>Don't have an account? <a href="{% url 'register' %}">Signup here</a></p>
-					                        </form>
-<!-- 
-
-						<input type="text" placeholder="Username">
-						<input type="text" placeholder="Password"> -->
                     </form>
 				</div>
 			</div>

@@ -96,15 +96,20 @@
     </footer> -->
     <!-- End of Page Footer -->
 
+    <hr>
+    <header class="page-header-profile">
+            <h1 class="page-header title">Rooms</h1>
+    
+    
+            {% for rm in room %}
 
-    
-    
-    {% for rm in room %}
+            <a href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
+            <br>
+            
+            {% endfor %}
 
-    <a href="{% url 'roomInfo' rm.id %}">{{rm.name}}</a>
-    <br>
-    
-    {% endfor %}
+    </header>
+
 
 
 
